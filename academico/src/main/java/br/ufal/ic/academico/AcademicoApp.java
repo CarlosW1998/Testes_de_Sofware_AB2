@@ -69,7 +69,7 @@ public class AcademicoApp extends Application<ConfigApp> {
         final ResourceCourse resourceCourse = new ResourceCourse(courseDAO);
         final MyResource resource = new MyResource(dao);
 
-        //final RequirementsResources  requirements = new RequirementsResources(subjectDAO, studentDAO, professorDAO, departamentDAO, courseDAO);
+        final ResourceSystemRequiriments  requirements = new ResourceSystemRequiriments(subjectDAO, studentDAO,  secretaryDAO, professorDAO, departamentDAO, courseDAO);
         environment.jersey().register(resourceSubject);
         environment.jersey().register(resourceStudent);
         environment.jersey().register(resourceSecretary);
@@ -77,7 +77,7 @@ public class AcademicoApp extends Application<ConfigApp> {
         environment.jersey().register(resourceDepartament);
         environment.jersey().register(resourceCourse);
 
-        //environment.jersey().register(requirements);
+        environment.jersey().register(requirements);
     }
 
     private final HibernateBundle<ConfigApp> hibernate

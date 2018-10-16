@@ -23,9 +23,9 @@ public class Student {
     private int course, departament;
 
     @Setter
-    private ArrayList<Subject> coursing;
+    private ArrayList<Long> coursing;
     @Setter
-    private ArrayList<Subject> aproved;
+    private ArrayList<Long> aproved;
 
     public Student(String name,  int departament, int course){
         this.name = name;

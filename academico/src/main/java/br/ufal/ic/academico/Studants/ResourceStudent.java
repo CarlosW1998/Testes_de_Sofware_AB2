@@ -84,8 +84,8 @@ public class ResourceStudent {
         private String name;
         private int credites;
         private int course, departament;
-        private ArrayList<Subject> coursing;
-        private ArrayList<Subject> aproved;
+        private ArrayList<Long> coursing;
+        private ArrayList<Long> aproved;
     }
 
 }
