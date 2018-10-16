@@ -10,7 +10,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
-import java.util.List;
 
 @Path("subjects")
 @Slf4j
@@ -95,7 +94,7 @@ public class ResourceSubject {
         private String type;
         private String professor;
         private ArrayList<Long> prerequisite;
-        private ArrayList<Student> studants;
+        private ArrayList<Long> studants;
     }
 
 

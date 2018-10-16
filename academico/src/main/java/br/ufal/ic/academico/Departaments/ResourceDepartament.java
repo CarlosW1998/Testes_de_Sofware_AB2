@@ -10,6 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
+import java.util.List;
 
 @Path("departaments")
 @Slf4j
@@ -83,8 +84,8 @@ public class ResourceDepartament {
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class DepartamentDTO {
         private String name;
-        private int[] courses;
-        private Secretary[] secretaries;
-        private int professors;
+        private List<Long> courses;
+        private List<Long> secretaries;
+        private List<Long> professors;
     }
 }

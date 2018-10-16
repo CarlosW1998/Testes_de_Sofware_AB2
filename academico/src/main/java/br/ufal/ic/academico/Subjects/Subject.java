@@ -28,7 +28,7 @@ public class Subject {
     @Setter
     private ArrayList<Long> prerequisite;
     @Setter
-    private ArrayList<Student> studants;
+    private ArrayList<Long> studants;
 
     public Subject(String name, Long couses, int credites, int requisitedCredits, String type, String professor, Long departament){
         this.name = name;

@@ -2,7 +2,6 @@ package br.ufal.ic.academico;
 
 import br.ufal.ic.academico.Courses.Course;
 import br.ufal.ic.academico.Courses.CourseDAO;
-import br.ufal.ic.academico.Courses.ResourceCourse;
 import br.ufal.ic.academico.Departaments.Departament;
 import br.ufal.ic.academico.Departaments.DepartamentDAO;
 import br.ufal.ic.academico.Professors.ProfessorDAO;
@@ -24,9 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 @Path("requirements")
 @Slf4j

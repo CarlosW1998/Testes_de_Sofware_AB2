@@ -1,13 +1,10 @@
 package br.ufal.ic.academico.Studants;
-import br.ufal.ic.academico.Courses.Course;
-import br.ufal.ic.academico.Subjects.Subject;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
@@ -19,6 +16,7 @@ public class Student {
     private Long id;
 
     private String name;
+    @Setter
     private int credites;
     private int course, departament;
 

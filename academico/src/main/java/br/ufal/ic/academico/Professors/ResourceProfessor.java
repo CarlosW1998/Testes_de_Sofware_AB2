@@ -9,6 +9,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
+import java.util.List;
 
 @Path("professors")
 @Slf4j
@@ -78,6 +79,6 @@ public class ResourceProfessor {
     public static class ProfessorDTO {
         private String name;
         private int departament;
-        private int[] teaching;
+        private List<Long> teaching;
     }
 }

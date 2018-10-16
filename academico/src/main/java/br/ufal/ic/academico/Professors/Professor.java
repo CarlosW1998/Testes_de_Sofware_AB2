@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 @Getter
@@ -21,7 +22,7 @@ public class Professor {
     private String name;
     private int departament;
     @Setter
-    private int[] teaching;
+    private List<Long> teaching;
 
     public Professor(String name, int departament){
         this.name = name;

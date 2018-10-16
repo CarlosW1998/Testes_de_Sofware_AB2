@@ -1,11 +1,13 @@
 package br.ufal.ic.academico.Departaments;
 
 import br.ufal.ic.academico.Secretarys.Secretary;
+import br.ufal.ic.academico.exemplos.Log;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -18,11 +20,11 @@ public class Departament {
     private String name;
 
     @Setter
-    private int[] courses;
+    private List<Long> courses;
     @Setter
-    private Secretary[] secretaries;
+    private List<Long> secretaries;
     @Setter
-    private int professors;
+    private List<Long> professors;
 
     public Departament (String name){
         this.name = name;

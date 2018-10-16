@@ -1,6 +1,5 @@
 package br.ufal.ic.academico.Studants;
 
-import br.ufal.ic.academico.Subjects.Subject;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.dropwizard.hibernate.UnitOfWork;
 import lombok.*;
@@ -10,7 +9,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
-import java.util.List;
 
 @Path("students")
 @Slf4j
@@ -80,12 +78,12 @@ public class ResourceStudent {
     @ToString
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class StudentDTO {
-
         private String name;
         private int credites;
         private int course, departament;
         private ArrayList<Long> coursing;
         private ArrayList<Long> aproved;
+
     }
 
 }
