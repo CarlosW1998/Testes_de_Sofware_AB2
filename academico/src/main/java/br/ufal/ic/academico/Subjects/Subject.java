@@ -1,8 +1,10 @@
 package br.ufal.ic.academico.Subjects;
 
 import br.ufal.ic.academico.Courses.Course;
+import br.ufal.ic.academico.Studants.Student;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,22 +20,24 @@ public class Subject {
     private Long id;
 
     private String name;
-    @ManyToMany(cascade =  {CascadeType.ALL})
-    private List<Subject> prerequisite;
-    @ManyToMany
-    private List<Course> courses;
+    private Long courses;
+    private Long departament;
     private int credites, requisitedCredits;
     private String type;
     private String professor;
+    @Setter
+    private ArrayList<Long> prerequisite;
+    @Setter
+    private ArrayList<Student> studants;
 
-    public Subject(String name, ArrayList<Subject> prerequisite, ArrayList<Course> couses, int credites, int requisitedCredits, String type, String professor){
+    public Subject(String name, Long couses, int credites, int requisitedCredits, String type, String professor, Long departament){
         this.name = name;
-        this.prerequisite = prerequisite;
         this.credites = credites;
         this.requisitedCredits = requisitedCredits;
         this.type = type;
         this.professor = professor;
         this.courses = couses;
+        this.departament = departament;
     }
 
 }

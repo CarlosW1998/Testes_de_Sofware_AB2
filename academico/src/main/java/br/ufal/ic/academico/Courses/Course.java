@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,10 +22,17 @@ public class Course {
     private String name;
     private String type;
 
+    private int departament;
+    private  int secretary;
+    @Setter
+    private ArrayList<Long> subjects;
+    @Setter
+    private ArrayList<Long> students;
 
-
-    public Course(String name, String Type){
+    public Course(String name, String Type, int departament, int secretary){
         this.name = name;
         this.type = type;
+        this.departament = departament;
+        this.secretary = secretary;
     }
 }

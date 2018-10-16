@@ -9,7 +9,7 @@ import java.util.List;
 
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
-
+@Slf4j
 public class DepartamentDAO extends AbstractDAO<Departament> {
     public DepartamentDAO(SessionFactory sessionFactory) {
         super(sessionFactory);
@@ -17,12 +17,12 @@ public class DepartamentDAO extends AbstractDAO<Departament> {
 
     @Override
     public Departament get(Serializable id) throws HibernateException {
-        log.info("getting person: id={}", id);
+        log.info("getting departament: id={}", id);
         return super.get(id);
     }
 
     public List<Departament> list() throws HibernateException {
-        log.info("getting persons");
+        log.info("getting departaments");
         return super.list(query("from Departament"));
     }
 

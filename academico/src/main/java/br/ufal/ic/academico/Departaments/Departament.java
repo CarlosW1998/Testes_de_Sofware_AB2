@@ -17,14 +17,15 @@ public class Departament {
 
     private String name;
 
-    @OneToOne
+    @Setter
+    private int[] courses;
+    @Setter
     private Secretary[] secretaries;
+    @Setter
+    private int professors;
 
-    public Departament (String name, Secretary graduate, Secretary postgraduate){
+    public Departament (String name){
         this.name = name;
-        this.secretaries = new Secretary[2];
-        this.secretaries[0] = graduate;
-        this.secretaries[1] = postgraduate;
     }
 
 }

@@ -18,12 +18,12 @@ public class SecretaryDAO extends AbstractDAO<Secretary> {
     }
     @Override
     public Secretary get(Serializable id) throws HibernateException {
-        log.info("getting person: id={}", id);
+        log.info("getting Secretary: id={}", id);
         return super.get(id);
     }
 
     public List<Secretary> list() throws HibernateException {
-        log.info("getting persons");
+        log.info("getting secretarys");
         return super.list(query("from Secretary"));
     }
 

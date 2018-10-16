@@ -20,12 +20,15 @@ public class Secretary {
     private String name;
     private String type;
 
-    @OneToMany
-    List<Course> courses;
+    @Setter
+    private ArrayList<Long> subjects;
 
-    public Secretary(String name,String type, ArrayList<Course> courses) {
+    private Long departament;
+
+
+    public Secretary(String name,String type, Long departament) {
         this.name = name;
         this.type = type;
-        this.courses = courses;
+        this.departament = departament;
     }
 }

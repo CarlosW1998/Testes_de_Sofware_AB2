@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import java.io.Serializable;
 import java.util.List;
 import io.dropwizard.hibernate.AbstractDAO;
-
+@Slf4j
 public class CourseDAO extends AbstractDAO<Course> {
     public CourseDAO(SessionFactory sessionFactory) {
         super(sessionFactory);
@@ -16,12 +16,12 @@ public class CourseDAO extends AbstractDAO<Course> {
 
     @Override
     public Course get(Serializable id) throws HibernateException {
-        log.info("getting person: id={}", id);
+        log.info("getting course: id={}", id);
         return super.get(id);
     }
 
     public List<Course> list() throws HibernateException {
-        log.info("getting persons");
+        log.info("getting couses");
         return super.list(query("from Course"));
     }
 

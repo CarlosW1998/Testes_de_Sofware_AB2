@@ -19,20 +19,19 @@ public class Student {
     private Long id;
 
     private String name;
-    private int credites, courseId;
-    @ManyToOne
-    private Course studying;
-    @OneToMany
-    private List<Subject> coursing;
-    @OneToMany
-    private List<Subject> aproved;
+    private int credites;
+    private int course, departament;
 
-    public Student(String name, Course studying){
+    @Setter
+    private ArrayList<Subject> coursing;
+    @Setter
+    private ArrayList<Subject> aproved;
+
+    public Student(String name,  int departament, int course){
         this.name = name;
-        this.studying = studying;
         this.credites = 0;
-        this.coursing = new ArrayList<Subject>();
-        this.aproved = new ArrayList<Subject>();
+        this.departament = departament;
+        this.course = course;
     }
 
 

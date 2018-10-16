@@ -16,12 +16,12 @@ public class StudentDAO extends AbstractDAO<Student>{
     }
     @Override
     public Student get(Serializable id) throws HibernateException {
-        log.info("getting students: id={}", id);
+        log.info("getting student: id={}", id);
         return super.get(id);
     }
 
     public List<Student> list() throws HibernateException {
-        log.info("getting persons");
+        log.info("getting students");
         return super.list(query("from Student"));
     }
 
